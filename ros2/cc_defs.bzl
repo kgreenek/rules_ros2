@@ -83,6 +83,7 @@ def _ros2_cpp_exec(target, name, ros2_package_name = None, set_up_ament = False,
         template = "@com_github_mvukov_rules_ros2//ros2:launch.sh.tpl",
         substitutions = {
             "{entry_point}": "$(rootpath {})".format(target_impl),
+            "{target_name}": name,
         },
         tags = ["manual"],
         data = [target_impl],

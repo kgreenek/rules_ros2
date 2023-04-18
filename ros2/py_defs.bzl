@@ -32,6 +32,7 @@ def _ros2_py_exec(target, name, srcs, main, set_up_ament, **kwargs):
         template = "@com_github_mvukov_rules_ros2//ros2:launch.sh.tpl",
         substitutions = {
             "{entry_point}": "$(rootpath {})".format(target_impl_symlink),
+            "{target_name}": name,
         },
         tags = ["manual"],
         data = [target_impl_symlink],

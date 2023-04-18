@@ -10,6 +10,7 @@ load("@rules_python//python:defs.bzl", "py_binary")
 ros2_cpp_binary(
     name = "talker",
     srcs = ["talker.cc"],
+    set_up_ament = True,
     deps = [
         "@ros2_common_interfaces//:cpp_std_msgs",
         "@ros2_rclcpp//:rclcpp",

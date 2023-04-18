@@ -330,6 +330,7 @@ def _sh_launcher_rule_impl(ctx):
         {
             "{{bash_bin}}": ctx.toolchains[SH_TOOLCHAIN].path,
             "{{ament_prefix_path}}": ament_prefix_path,
+            "{{repository_name}}": ctx.workspace_name,
         },
     )
 
